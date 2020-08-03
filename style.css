@@ -9,62 +9,60 @@ body {
     line-height: 1.6;
 }
 
-ul {
-    list-style: none;    
-}
-
-ul li {
-    padding: 8px;
-    background: #f4f4f4;
-    margin: auto;
-    overflow: auto;
-    width: 450px;    
-    text-align: center;
-}
-
 header {
+    text-align: center;
     background: #f4f4f4;
     padding: 1rem;
-    text-align: center;
 }
 
-.container {
+ul {
+    list-style: none;
+}
+
+ul li {    
+    background: #f4f4f4;
+    padding: 1rem;
+    margin: 5px 0;
+    width: 437px;
+}
+
+.container {    
     margin: auto;
+    overflow: auto;    
     width: 500px;
-    overflow: auto;
     padding: 3rem 2rem;
 }
 
 #my-form {
-    padding: 2rem;    
-    background: #f4f4f4;
+    background: #f4f4f4;    
+    padding: 2rem;
 }
 
 #my-form label {
     display: block;
 }
 
-#my-form input[type=text] {
+#my-form input[type='text'] {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    border: solid 1px #ccc;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 8px;    
 }
 
 .btn {
     display: block;
-    width: 100%; 
-    padding: 10px 15px;
-    border: 0;
+    width: 100%;
     background: #333;
     color: #fff;
+    padding: 10px 15px;
+    border: solid 1px;
     border-radius: 5px;
     margin: 5px 0;
 }
 
 .btn:hover {
-    background: #444;    
+    background: #444;
 }
 
 .bg-dark {

@@ -1,32 +1,29 @@
-// User Form Script
-
 // Put DOM elements into variables
 const myForm = document.querySelector('#my-form');
+const msg = document.querySelector('.msg');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
-const msg = document.querySelector('.msg');
 const userList = document.querySelector('#users');
 
 // Listen for form submit
-myForm.addEventListener('submit', onSubmit);
+myForm.addEventListener('submit', onSubmit)
 
 function onSubmit(e) {
     e.preventDefault();
 
     if(nameInput.value == '' || emailInput.value == '') {
         msg.classList.add('error');
-        msg.innerHTML = 'Please enter all the fields';
+        msg.innerHTML = 'Please enter all fields';
 
-        //Remove error after 3 seconds
+        // Remove error after 3 seconds
         setTimeout(() => msg.remove(), 3000);
     } else {
-        // Create new list item with user
+        // Create li element
         const li = document.createElement('li');
-
-        // Add HTML
+        
         li.innerHTML = `<strong>${nameInput.value}</strong>: ${emailInput.value}`;
 
-        // Append to ul
+        // Append li to ul
         userList.appendChild(li);
 
         // Clear fields
