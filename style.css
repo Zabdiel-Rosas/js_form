@@ -10,13 +10,16 @@ body {
 }
 
 ul {
-    list-style: none;
+    list-style: none;    
 }
 
 ul li {
-    padding: 5px;
+    padding: 8px;
     background: #f4f4f4;
-    margin: 5px 0;
+    margin: auto;
+    overflow: auto;
+    width: 450px;    
+    text-align: center;
 }
 
 header {
