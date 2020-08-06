@@ -1,32 +1,33 @@
-// Put DOM elements into variables
+// Brings the elements from the DOM into variables
 const myForm = document.querySelector('#my-form');
-const msg = document.querySelector('.msg');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
-const userList = document.querySelector('#users');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('.users');
 
-// Listen for form submit
-myForm.addEventListener('submit', onSubmit)
+// Create EventListener
+myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
     e.preventDefault();
 
     if(nameInput.value == '' || emailInput.value == '') {
         msg.classList.add('error');
-        msg.innerHTML = 'Please enter all fields';
+        msg.innerHTML = 'Please fill all the fields';
 
-        // Remove error after 3 seconds
-        setTimeout(() => msg.remove(), 3000);
+        // Remove msg
+        setTimeout(() => msg.remove(), 2000);        
     } else {
         // Create li element
         const li = document.createElement('li');
-        
-        li.innerHTML = `<strong>${nameInput.value}</strong>: ${emailInput.value}`;
 
-        // Append li to ul
+        // Asing values to the element
+        li.innerHTML = `<strong>${nameInput.value}:</strong> ${emailInput.value}`;
+
+        // Append to the list
         userList.appendChild(li);
 
-        // Clear fields
+        // Clear inputs
         nameInput.value = '';
         emailInput.value = '';
     }
